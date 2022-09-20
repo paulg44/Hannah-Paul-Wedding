@@ -50,8 +50,20 @@
               deserunt cumque itaque vitae optio minima fugit assumenda
               praesentium ipsum placeat!
             </p>
-            <button class="btn btn-rsvp accept">Accept</button>
-            <button class="btn btn-rsvp decline">Decline</button>
+            <button id="acceptBtn" class="btn btn-rsvp">
+              <audio
+                id="accept"
+                src="./sounds/sound-board_sounds_applause.mp3"
+              ></audio
+              >Accept
+            </button>
+            <button id="declineBtn" class="btn btn-rsvp">
+              <audio
+                id="decline"
+                src="./sounds/sound-board_sounds_boo.mp3"
+              ></audio>
+              Decline
+            </button>
           </div>
           <div class="live-counter">
             <h3>Attending</h3>
@@ -62,5 +74,7 @@
         </div>
       </div>
     </section>
+
+    <script src="./script.js"></script>
   </body>
 </html>
