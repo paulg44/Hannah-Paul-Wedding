@@ -1,0 +1,144 @@
+:root {
+  --dark-purple-color: #4e053e;
+  --light-purple-color: #5b0e4e;
+  --gold-color: #dc9c40;
+  --light-color: #f4f4f4;
+  --dark-color: #333;
+  --max-width: 1200px;
+  --script-font: 'Great Vibes', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Monserat', sans-serif;
+  line-height: 1.5;
+  background-color: var(--light-color);
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  overflow: hidden;
+  padding: 0 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  padding: 0.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  color: var(--light-color);
+  font-size: 1.2rem;
+  background-color: var(--dark-purple-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+}
+
+.shadow {
+  text-shadow: 5px 5px 2px var(--dark-color);
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  background: var(--dark-purple-color);
+  z-index: 1;
+  border-bottom: 2px solid var(--gold-color);
+}
+
+.navbar .logo {
+  font-family: var(--script-font);
+  font-size: 2.5rem;
+  padding: 0px 30px;
+  margin-top: 5px;
+}
+
+.navbar .logo span {
+  color: var(--gold-color);
+}
+
+.navbar a {
+  color: var(--light-color);
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 20px;
+}
+
+/* Main Homepage */
+.main {
+  position: relative;
+  background: url('/img/img_2_1663527327060\ \(2\).jpg') no-repeat center
+    center/cover;
+  height: 100vh;
+}
+
+.main .main-header {
+  position: absolute;
+  color: var(--gold-color);
+  top: 370px;
+  text-align: center;
+}
+
+/* RSVP */
+.flex-container {
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+
+.rsvp-side {
+  flex: 1;
+}
+
+.live-counter {
+  flex: 1;
+}
+
+.rsvp-side .btn-rsvp {
+  font-family: var(--script-font);
+  font-size: 2rem;
+  margin: 20px;
+}
+
+.rsvp-side .btn-rsvp:hover {
+  color: var(--gold-color);
+}
+
+.rsvp-side .btn-rsvp:active {
+  transform: scale(0.98);
+}
