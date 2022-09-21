@@ -125,8 +125,23 @@ a {
   flex: 1;
 }
 
-.live-counter {
-  flex: 1;
+.rsvp-side::after,
+.rsvp-side::before {
+  content: '\f004';
+  font-family: 'Font Awesome 5 Free';
+  color: var(--light-purple-color);
+  font-size: 10rem;
+  opacity: 0.1;
+  position: absolute;
+  top: 55px;
+  left: 525px;
+  z-index: 0;
+}
+
+.rsvp-side::before {
+  color: var(--gold-color);
+  top: 90px;
+  left: 600px;
 }
 
 .rsvp-side .btn-rsvp {
@@ -141,4 +156,30 @@ a {
 
 .rsvp-side .btn-rsvp:active {
   transform: scale(0.98);
+}
+
+.live-counter {
+  flex: 1;
+  margin: 10px;
+  background-color: var(--light-color);
+  height: 250px;
+  max-width: 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  box-shadow: 0 0 5px 3px var(--dark-color), 0 0 10px 10px var(--gold-color);
+}
+
+.live-counter h3 {
+  position: absolute;
+  bottom: 210px;
+  color: var(--light-purple-color);
+}
+
+.live-counter p {
+  font-size: 6rem;
+  font-family: var(--script-font);
 }
