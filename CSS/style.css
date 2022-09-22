@@ -59,6 +59,7 @@ a {
   background-color: var(--dark-purple-color);
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
+  cursor: pointer;
 }
 
 .shadow {
@@ -123,6 +124,15 @@ a {
 
 .rsvp-side {
   flex: 1;
+  position: relative;
+}
+
+.rsvp-side h3 {
+  text-shadow: 2px 2px 5px var(--light-purple-color);
+}
+
+.rsvp-side p {
+  padding: 10px 100px;
 }
 
 .rsvp-side::after,
@@ -148,14 +158,17 @@ a {
   font-family: var(--script-font);
   font-size: 2rem;
   margin: 20px;
+  box-shadow: 2px 2px 5px var(--dark-color);
+  transition: transform 0.5s linear;
 }
 
 .rsvp-side .btn-rsvp:hover {
   color: var(--gold-color);
+  transform: rotateX(360deg);
 }
 
 .rsvp-side .btn-rsvp:active {
-  transform: scale(0.98);
+  transform: scale(0.9);
 }
 
 .live-counter {
@@ -170,16 +183,63 @@ a {
   align-items: center;
   justify-content: center;
   margin: 50px;
+  border-radius: 10px;
   box-shadow: 0 0 5px 3px var(--dark-color), 0 0 10px 10px var(--gold-color);
 }
 
-.live-counter h3 {
+/* .live-counter::after,
+.live-counter::before {
+  content: '\f004';
+  font-family: 'Font Awesome 5 Free';
+  color: var(--light-purple-color);
+  font-size: 10rem;
+  top: 50px;
+  right: 90px;
+  opacity: 0.1;
   position: absolute;
-  bottom: 210px;
+  z-index: 0;
+} */
+
+.live-counter::before {
+  left: 90px;
+  color: var(--gold-color);
+}
+
+.live-counter h3 {
+  /* font-family: 'Monserat', sans-serif; */
+  position: absolute;
+  bottom: 165px;
   color: var(--light-purple-color);
 }
 
 .live-counter p {
   font-size: 6rem;
   font-family: var(--script-font);
+}
+
+/* Footer */
+
+.footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.footer .created {
+  margin-top: 40px;
+  margin-right: 10px;
+}
+
+.footer-contact {
+  position: absolute;
+  left: 170px;
+  top: 20px;
+}
+
+.footer-contact a {
+  color: var(--gold-color);
 }
