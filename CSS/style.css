@@ -73,7 +73,7 @@ a {
   display: flex;
   justify-content: space-between;
   background: var(--dark-purple-color);
-  z-index: 1;
+  z-index: 2;
   border-bottom: 2px solid var(--gold-color);
 }
 
@@ -98,6 +98,61 @@ a {
 
 .navbar ul li {
   margin: 20px;
+}
+
+/* Section Divider */
+.section-divider {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 20px 0;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: 100px;
+  overflow: hidden;
+  width: 400px;
+  height: 6px;
+  background: linear-gradient(
+    to right,
+    var(--light-color),
+    var(--dark-purple-color)
+  );
+  border-radius: 5px;
+}
+
+.section-divider::before {
+  position: absolute;
+  left: 765px;
+  background: linear-gradient(
+    to right,
+    var(--dark-purple-color),
+    var(--light-color)
+  );
+}
+
+.section-divider i {
+  text-shadow: 2px 2px 5px var(--light-purple-color);
+}
+
+.section-divider .skull {
+  color: var(--light-purple-color);
+  z-index: 1;
+  text-shadow: 2px 2px 5px var(--dark-color);
+}
+
+.section-divider .hearts {
+  color: var(--gold-color);
+  position: absolute;
+  margin-right: 120px;
+}
+
+.section-divider .hearts:nth-child(1) {
+  margin-left: 240px;
 }
 
 /* Main Homepage */
