@@ -92,6 +92,10 @@ a {
   color: var(--light-color);
 }
 
+.navbar a:hover {
+  color: var(--gold-color);
+}
+
 .navbar ul {
   display: flex;
 }
@@ -100,12 +104,34 @@ a {
   margin: 20px;
 }
 
+.navbar ul li:hover {
+  animation: swing 2s ease;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 /* Section Divider */
 .section-divider {
   display: flex;
   justify-content: center;
   position: relative;
   margin: 20px 0;
+  opacity: 0.8;
 }
 
 .section-divider::before,
@@ -116,7 +142,7 @@ a {
   left: 100px;
   overflow: hidden;
   width: 400px;
-  height: 6px;
+  height: 3px;
   background: linear-gradient(
     to right,
     var(--light-color),
@@ -199,14 +225,14 @@ a {
   opacity: 0.1;
   position: absolute;
   top: 55px;
-  left: 525px;
+  right: 525px;
   z-index: 0;
 }
 
 .rsvp-side::before {
   color: var(--gold-color);
   top: 90px;
-  left: 600px;
+  right: 600px;
 }
 
 .rsvp-side .btn-rsvp {
@@ -214,12 +240,11 @@ a {
   font-size: 2rem;
   margin: 20px;
   box-shadow: 2px 2px 5px var(--dark-color);
-  transition: transform 0.5s linear;
+  /* transition: transform 0.5s linear; */
 }
 
 .rsvp-side .btn-rsvp:hover {
   color: var(--gold-color);
-  transform: rotateX(360deg);
 }
 
 .rsvp-side .btn-rsvp:active {
