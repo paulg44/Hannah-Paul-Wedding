@@ -37,10 +37,11 @@ h6 {
   font-family: 'Great Vibes', cursive;
   font-size: 3rem;
   padding: 0.5rem;
+  text-shadow: 1px 1px 3px var(--dark-color);
 }
 
 img {
-  width: 100%;
+  width: 50%;
 }
 
 li {
@@ -62,8 +63,9 @@ a {
   cursor: pointer;
 }
 
-.shadow {
-  text-shadow: 5px 5px 2px var(--dark-color);
+hr {
+  height: 3px;
+  color: var(--dark-purple-color);
 }
 
 /* Navbar */
@@ -169,6 +171,23 @@ a {
   color: var(--light-purple-color);
   z-index: 1;
   text-shadow: 2px 2px 5px var(--dark-color);
+  animation: gel 2s ease infinite;
+}
+
+@keyframes gel {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.01);
+  }
 }
 
 .section-divider .hearts {
@@ -194,6 +213,10 @@ a {
   color: var(--gold-color);
   top: 370px;
   text-align: center;
+}
+
+.main .main-header h1 {
+  text-shadow: 5px 5px 10px var(--dark-color);
 }
 
 /* RSVP */
@@ -297,6 +320,8 @@ a {
   font-family: var(--script-font);
 }
 
+/* Venue */
+
 /* Footer */
 
 .footer {
@@ -322,4 +347,5 @@ a {
 
 .footer-contact a {
   color: var(--gold-color);
+  padding: 10px;
 }
