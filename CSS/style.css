@@ -72,6 +72,12 @@ hr {
   color: var(--dark-purple-color);
 }
 
+.flex-container {
+  position: relative;
+  display: flex;
+  text-align: center;
+}
+
 /* Navbar */
 .navbar {
   position: sticky;
@@ -224,17 +230,30 @@ hr {
   text-shadow: 5px 5px 10px var(--dark-color);
 }
 
-/* RSVP */
-.flex-container {
-  position: relative;
-  display: flex;
-  text-align: center;
+.welcome-content p {
+  padding: 20px 150px 50px;
 }
 
-.rsvp-side {
-  flex: 1;
-  position: relative;
+.welcome-content::after,
+.welcome-content::before {
+  content: '\f004';
+  font-family: 'Font Awesome 5 Free';
+  color: var(--light-purple-color);
+  font-size: 10rem;
+  opacity: 0.1;
+  position: absolute;
+  bottom: 55px;
+  right: 125px;
+  z-index: 0;
 }
+
+.welcome-content::before {
+  color: var(--gold-color);
+  right: 200px;
+  bottom: 10px;
+}
+
+/* RSVP */
 
 .rsvp-side p {
   padding: 10px 100px;
@@ -273,52 +292,6 @@ hr {
 
 .rsvp-side .btn-rsvp:active {
   transform: scale(0.9);
-}
-
-.live-counter {
-  flex: 1;
-  margin: 10px;
-  background-color: var(--light-color);
-  height: 250px;
-  max-width: 250px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 50px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px 3px var(--dark-color), 0 0 10px 10px var(--gold-color);
-}
-
-/* .live-counter::after,
-.live-counter::before {
-  content: '\f004';
-  font-family: 'Font Awesome 5 Free';
-  color: var(--light-purple-color);
-  font-size: 10rem;
-  top: 50px;
-  right: 90px;
-  opacity: 0.1;
-  position: absolute;
-  z-index: 0;
-} */
-
-.live-counter::before {
-  left: 90px;
-  color: var(--gold-color);
-}
-
-.live-counter h3 {
-  /* font-family: 'Monserat', sans-serif; */
-  position: absolute;
-  bottom: 165px;
-  color: var(--light-purple-color);
-}
-
-.live-counter p {
-  font-size: 6rem;
-  font-family: var(--script-font);
 }
 
 /* Venue */

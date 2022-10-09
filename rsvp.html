@@ -28,25 +28,11 @@
       </div>
     </nav>
 
-    <section id="main" class="main">
-      <div class="container">
-        <div class="main-header">
-          <h1>Hannah & Paul</h1>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider">
-      <i class="fa-regular fa-heart fa-4x hearts"></i
-      ><i class="fa-solid fa-skull fa-6x skull"></i
-      ><i class="fa-regular fa-heart fa-4x hearts"></i>
-    </div>
-
-    <section id="welcome" class="welcome">
+    <section id="rsvp" class="rsvp">
       <div class="container">
         <div class="flex-container">
-          <div class="welcome-content">
-            <h3 class="purple-text-shadow">Welcome</h3>
+          <div class="rsvp-side">
+            <h3 class="purple-text-shadow">RSVP</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Dignissimos, inventore, unde non excepturi doloribus quia eum
@@ -56,6 +42,21 @@
               deserunt cumque itaque vitae optio minima fugit assumenda
               praesentium ipsum placeat!
             </p>
+            <!-- Add Form Here -->
+            <button id="acceptBtn" class="btn btn-rsvp">
+              <audio
+                id="accept"
+                src="./sounds/sound-board_sounds_applause.mp3"
+              ></audio
+              >Accept
+            </button>
+            <button id="declineBtn" class="btn btn-rsvp">
+              <audio
+                id="decline"
+                src="./sounds/sound-board_sounds_boo.mp3"
+              ></audio>
+              Decline
+            </button>
           </div>
         </div>
       </div>
