@@ -182,10 +182,12 @@ hr {
   color: var(--gold-color);
   position: absolute;
   margin-right: 120px;
+  transform: rotate(-20deg);
 }
 
 .section-divider .hearts:nth-child(1) {
   margin-left: 240px;
+  transform: rotate(20deg);
 }
 
 .divider-two i {
@@ -199,12 +201,14 @@ hr {
   margin-top: 20px;
   opacity: 0.8;
   color: var(--gold-color);
+  transform: rotate(-20deg);
 }
 
 .info-divider i:nth-child(1) {
   position: absolute;
   color: var(--light-purple-color);
   margin-left: 35px;
+  transform: rotate(20deg);
 }
 
 .info-divider i:nth-child(2) {
@@ -355,7 +359,6 @@ hr {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
   padding: 40px;
 }
 
