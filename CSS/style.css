@@ -121,7 +121,7 @@ hr {
   display: flex;
   justify-content: center;
   position: relative;
-  margin: 20px 0;
+  margin: 50px 0;
   opacity: 0.8;
 }
 
@@ -221,6 +221,7 @@ hr {
   background: url('/img/img_2_1663527327060\ \(2\).jpg') no-repeat center
     center/cover;
   height: 100vh;
+  border-bottom: 2px solid var(--gold-color);
 }
 
 .main .main-header {
@@ -255,6 +256,56 @@ hr {
   color: var(--gold-color);
   right: 200px;
   bottom: 10px;
+}
+
+.countdown h3 {
+  text-align: center;
+}
+
+#timer {
+  height: 200px;
+  text-align: center;
+}
+
+#timer div {
+  display: inline-block;
+  padding: 30px;
+  margin: 20px;
+  background: var(--dark-purple-color);
+  color: var(--light-color);
+  border-radius: 10px;
+  font-family: var(--script-font);
+  font-size: 3rem;
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.8);
+}
+
+#timer div span {
+  display: block;
+  color: var(--light-color);
+  padding: 0px 20px;
+  font-family: 'Monserat', sans-serif;
+  font-size: 1rem;
+}
+
+.countdown::before {
+  content: '\f57f';
+  font-family: 'Font Awesome 5 Free';
+  color: var(--light-purple-color);
+  font-size: 10rem;
+  opacity: 0.1;
+  position: absolute;
+  left: 120px;
+  z-index: 0;
+  animation: rotate 2s ease infinite;
+}
+
+@keyframes rotate {
+  from {
+    rotate: (0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* RSVP */
