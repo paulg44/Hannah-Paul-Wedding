@@ -121,7 +121,7 @@ hr {
   display: flex;
   justify-content: center;
   position: relative;
-  margin: 50px 0;
+  margin: 20px 0;
   opacity: 0.8;
 }
 
@@ -233,6 +233,10 @@ hr {
 
 .main .main-header h1 {
   text-shadow: 5px 5px 10px var(--dark-color);
+}
+
+.section-divider-main {
+  margin: 50px 0px;
 }
 
 .welcome-content p {
