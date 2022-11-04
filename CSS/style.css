@@ -432,99 +432,123 @@ hr {
 }
 
 /* Fun */
-.fun {
-  background: url(/img/artiom-vallat-mFrLqRZMx7o-unsplash.jpg) no-repeat center
-    center/cover;
-}
-
-.fun h2 {
+.card-h2 {
   text-align: center;
-  color: var(--light-color);
-  padding: 20px 0;
   font-size: 4rem;
-  text-shadow: var(--dark-color) 5px 10px 10px;
+  margin-top: 10px;
 }
 
-.fun-cards {
+.card-section {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-}
-
-.fun-card {
-  background-color: var(--light-purple-color);
-  position: relative;
-  width: 250px;
-  height: 450px;
-  color: var(--light-color);
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  margin: 20px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 1);
+  flex-wrap: wrap;
 }
 
-.fun-card h3 {
-  position: relative;
-  top: 15px;
-}
-
-.fun-card p {
+.card {
+  width: 200px;
+  height: 400px;
+  margin: 40px;
   text-align: center;
-  padding: 0 10px;
+  perspective: 400px;
+  border-radius: 10px;
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8); */
 }
 
-.fun-card img {
-  width: 80%;
-  margin: 10px 0;
-  border-radius: 50%;
-  box-shadow: 0 3px 5px var(--dark-color);
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transform-origin: center right;
+  transition: transform 1s;
+  transform-style: preserve-3d;
 }
 
-.fun-card .progess-bar {
+.card-container.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+.card-front {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.card-back {
+  background-color: var(--light-purple-color);
+  color: #fff;
+  transform: rotateY(180deg);
+}
+
+.card h2 {
+  font-size: 3rem;
+}
+
+.card .alt-h2 {
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.card h3 {
+  font-size: 2rem;
+  padding-top: 20px;
+  text-shadow: 2px 2px 4px var(--dark-color);
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid var(--gold-color);
+  border-radius: 10px 10px 0 0;
+}
+
+.card p {
+  padding: 10px 20px;
+}
+
+.progress-bar {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  padding-bottom: 20px;
+  align-items: center;
 }
 
-.fun-card .progess-bar progress[value] {
+.progress-bar progress[value] {
   -webkit-appearance: none;
   appearance: none;
 }
 
-.fun-card .progess-bar progress::-webkit-progress-bar {
+.progress-bar progress::-webkit-progress-bar {
   background-color: var(--light-color);
   height: 5px;
   border-radius: 10px;
 }
 
-.fun-card .progess-bar progress::-webkit-progress-value {
+.progress-bar progress::-webkit-progress-value {
   background-color: var(--gold-color);
 }
 
-.fun-card label::after {
+.progress-bar label {
+  margin-right: 100px;
+}
+
+label::after {
   content: '10%';
   position: absolute;
-  left: 190px;
+  left: 150px;
   font-size: 0.75rem;
   border: 1px solid var(--gold-color);
   border-radius: 50%;
   padding: 2px;
-}
-
-.fun-card .hannah-one::after {
-  content: '30%';
-}
-.fun-card .hannah-two::after {
-  content: '95%';
-}
-.fun-card .hannah-three::after {
-  content: '78%';
 }
 
 /* Footer */
