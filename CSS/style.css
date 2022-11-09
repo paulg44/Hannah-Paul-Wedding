@@ -50,6 +50,7 @@ li {
 
 a {
   text-decoration: none;
+  color: var(--light-color);
 }
 
 .btn {
@@ -70,6 +71,10 @@ a {
 hr {
   height: 3px;
   color: var(--dark-purple-color);
+}
+
+.current {
+  color: var(--gold-color);
 }
 
 .flex-container {
@@ -100,12 +105,8 @@ hr {
   color: var(--gold-color);
 }
 
-.navbar a {
-  color: var(--light-color);
-}
-
 .navbar a:hover {
-  color: var(--gold-color);
+  border-bottom: 2px solid var(--gold-color);
 }
 
 .navbar ul {
@@ -214,11 +215,6 @@ hr {
 .info-divider i:nth-child(2) {
   margin-right: 35px;
 }
-
-.section-divider-fun {
-}
-
-.section-divider-fun 
 
 /* Main Homepage */
 .main {
@@ -447,6 +443,7 @@ hr {
 /* Fun */
 .card-section {
   background-color: #bbb;
+  padding-top: 10px;
 }
 
 .card-h2 {
