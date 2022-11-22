@@ -550,7 +550,11 @@ hr {
 .progress-bar {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
 }
 
 .progress-bar progress[value] {
@@ -569,18 +573,52 @@ hr {
 }
 
 .progress-bar label {
-  margin-right: 100px;
+  left: 0;
 }
 
 label::after {
   content: '10%';
   position: absolute;
-  left: 150px;
+  left: 140px;
   font-size: 0.75rem;
   border: 1px solid var(--gold-color);
   border-radius: 50%;
   padding: 2px;
 }
+
+/* Hannah Card */
+.hannah-one::after {
+  content: '83%';
+}
+.hannah-two::after {
+  content: '99%';
+}
+.hannah-three::after {
+  content: '11%';
+}
+/* Paul Card */
+.paul-one:after {
+  content: '90%';
+}
+.paul-two::after {
+  content: '78%';
+}
+.paul-three::after {
+  content: '17%';
+}
+/* Eli Card */
+/* Ivy Card */
+/* Becky Card */
+/* Rosie Card */
+/* Tina Card */
+/* Danni Card */
+/* Adam BM Card */
+/* Nick Card */
+/* Adam Brother Card */
+/* Harry Card */
+/* Esmae Card */
+/* Andrew Card */
+/* Dad Card */
 
 /* Footer */
 

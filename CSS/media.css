@@ -1,0 +1,63 @@
+/* Smartphones */
+@media (max-width: 650px) {
+  /* Utilities */
+  * {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Navbar */
+  .navbar {
+    display: block;
+    top: 0px;
+    padding: 20px 0px 20px 10px;
+  }
+
+  /* Main */
+  .main .main-header {
+    top: 550px;
+  }
+
+  .welcome-content p {
+    padding: 10px;
+  }
+
+  /* Timer */
+  #timer {
+    height: 350px;
+  }
+
+  #timer div {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 70px;
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  #timer div span {
+    padding: 0;
+  }
+
+  /* Footer */
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer h6 {
+    margin-right: 200px;
+  }
+
+  .footer-contact {
+    padding: 0px 10px 10px;
+  }
+
+  .footer-contact i,
+  .footer-contact a {
+    padding-top: 5px;
+  }
+
+  .footer .created {
+    margin-top: 20px;
+  }
+}
