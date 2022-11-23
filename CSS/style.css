@@ -301,7 +301,7 @@ hr {
   position: absolute;
   left: 120px;
   z-index: 0;
-  animation: rotate 2s ease infinite;
+  /* animation: rotate 2s ease infinite; */
 }
 
 @keyframes rotate {
@@ -444,6 +444,7 @@ hr {
 .card-section {
   background-color: #bbb;
   padding-top: 10px;
+  border-bottom: 3px solid var(--dark-purple-color);
 }
 
 .card-h2 {
@@ -608,17 +609,130 @@ label::after {
 }
 /* Eli Card */
 /* Ivy Card */
-/* Becky Card */
-/* Rosie Card */
-/* Tina Card */
-/* Danni Card */
-/* Adam BM Card */
-/* Nick Card */
-/* Adam Brother Card */
-/* Harry Card */
-/* Esmae Card */
-/* Andrew Card */
-/* Dad Card */
+
+/* Bridesmaids*/
+.bridesmaids {
+  display: flex;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.bridesmaid h3,
+.bestmen h3 {
+  margin-left: 100px;
+  padding: 25px 0;
+}
+
+.bridesmaids h4 {
+  font-size: 1.5rem;
+}
+
+.bridesmaids img {
+  width: 50%;
+  border-radius: 100%;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+.becky::before {
+  content: 'Becky';
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 50px;
+  font-family: var(--script-font);
+  font-size: 20px;
+}
+.becky::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 1.5px;
+  margin-top: -135px;
+  margin-left: -100px;
+  background: var(--gold-color);
+  box-shadow: 3px 0px 15px 5px var(--gold-color);
+  z-index: -1;
+}
+
+.rosie::before {
+  content: 'Rosie';
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 50px;
+  font-family: var(--script-font);
+  font-size: 20px;
+}
+.rosie::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 1.5px;
+  margin-top: -135px;
+  margin-left: -100px;
+  background: var(--light-purple-color);
+  box-shadow: 3px 0px 15px 5px var(--dark-purple-color);
+  z-index: -1;
+}
+
+.tina::before {
+  content: 'Tina';
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 50px;
+  font-family: var(--script-font);
+  font-size: 20px;
+}
+.tina::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 1.5px;
+  margin-top: -135px;
+  margin-left: -100px;
+  background: radial-gradient(var(--light-purple-color), var(--gold-color));
+  box-shadow: 3px 0px 15px 5px var(--gold-color);
+  z-index: -1;
+}
+
+.danni::before {
+  content: 'Danni';
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 50px;
+  font-family: var(--script-font);
+  font-size: 20px;
+}
+.danni::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 1.5px;
+  margin-top: -135px;
+  margin-left: -100px;
+  background: var(--dark-purple-color);
+  box-shadow: 3px 0px 15px 5px var(--light-purple-color);
+  z-index: -1;
+}
+
+/* Best Men */
+.bestmen {
+  background-color: #bbb;
+  border-top: 3px solid var(--gold-color);
+}
+
+.best-men {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 10px auto 0;
+}
+
+.best-men img {
+  width: 250px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
 
 /* Footer */
 
