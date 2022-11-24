@@ -301,7 +301,7 @@ hr {
   position: absolute;
   left: 120px;
   z-index: 0;
-  /* animation: rotate 2s ease infinite; */
+  animation: rotate 2s ease infinite;
 }
 
 @keyframes rotate {
@@ -615,12 +615,12 @@ label::after {
   display: flex;
   text-align: center;
   margin: 10px auto;
+  padding: 20px 0;
 }
 
-.bridesmaid h3,
-.bestmen h3 {
+.bridesmaid h3 {
   margin-left: 100px;
-  padding: 25px 0;
+  padding: 30px 0 10px;
 }
 
 .bridesmaids h4 {
@@ -631,6 +631,11 @@ label::after {
   width: 50%;
   border-radius: 100%;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out;
+}
+
+.bridesmaids img:hover {
+  transform: scale(1.2);
 }
 
 .becky::before {
@@ -640,6 +645,7 @@ label::after {
   margin-left: 50px;
   font-family: var(--script-font);
   font-size: 20px;
+  z-index: 1;
 }
 .becky::after {
   content: '';
@@ -660,6 +666,7 @@ label::after {
   margin-left: 50px;
   font-family: var(--script-font);
   font-size: 20px;
+  z-index: 1;
 }
 .rosie::after {
   content: '';
@@ -680,6 +687,7 @@ label::after {
   margin-left: 50px;
   font-family: var(--script-font);
   font-size: 20px;
+  z-index: 1;
 }
 .tina::after {
   content: '';
@@ -700,6 +708,7 @@ label::after {
   margin-left: 50px;
   font-family: var(--script-font);
   font-size: 20px;
+  z-index: 1;
 }
 .danni::after {
   content: '';
@@ -714,24 +723,50 @@ label::after {
 }
 
 /* Best Men */
+
 .bestmen {
-  background-color: #bbb;
-  border-top: 3px solid var(--gold-color);
-}
-
-.best-men {
-  display: flex;
-  justify-content: space-evenly;
+  position: relative;
   text-align: center;
-  margin: 10px auto 0;
+  margin: 20px auto;
 }
 
-.best-men img {
+.bestmen h3 {
+  margin-bottom: 20px;
+}
+
+.bestmen img {
   width: 250px;
   margin-bottom: 10px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.bestmen .circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  margin-left: -23px;
+  margin-top: -23px;
+  border-radius: 100%;
+  background-color: var(--dark-color);
+  border: 3px solid var(--dark-color);
+  box-shadow: 3px 0px 15px 5px var(--light-purple-color);
+  z-index: -1;
+  animation: rotate 2s ease infinite;
+}
+
+.bestmen .circle-gold {
+  box-shadow: 3px 0px 15px 5px var(--gold-color);
+}
+
+.best-men {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.best-men h4 {
+  margin-top: 10px;
 }
 
 /* Footer */
