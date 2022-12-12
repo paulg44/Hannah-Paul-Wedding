@@ -44,7 +44,7 @@
           </div>
         </div>
         <div class="contact-form">
-          <form name="contact">
+          <form name="contact" method="POST" data-netlify="true">
             <div class="inputs">
               <input type="text" name="name" placeholder="Name" required />
               <input type="text" name="email" placeholder="Email" />
@@ -55,14 +55,14 @@
               ></textarea>
             </div>
 
-            <button id="acceptBtn" class="btn btn-rsvp">
+            <button type="submit" id="acceptBtn" class="btn btn-rsvp">
               <audio
                 id="accept"
                 src="./sounds/sound-board_sounds_applause.mp3"
               ></audio
               >Accept
             </button>
-            <button id="declineBtn" class="btn btn-rsvp">
+            <button type="submit" id="declineBtn" class="btn btn-rsvp">
               <audio
                 id="decline"
                 src="./sounds/sound-board_sounds_boo.mp3"
