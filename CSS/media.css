@@ -75,13 +75,12 @@
 
   .rsvp-side::after,
   .rsvp-side::before {
-    top: 120px;
+    top: 100px;
     right: 75px;
   }
 
   .rsvp-side::before {
-    top: 180px;
-    right: 175px;
+    top: 115px;
   }
 
   .inputs input {
