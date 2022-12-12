@@ -75,8 +75,7 @@
 
   .rsvp-side::after,
   .rsvp-side::before {
-    top: 100px;
-    right: 75px;
+    display: none;
   }
 
   .rsvp-side::before {
