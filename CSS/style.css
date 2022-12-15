@@ -244,6 +244,12 @@ hr {
   padding: 20px 150px 50px;
 }
 
+.welcome-content p span {
+  color: var(--gold-color);
+  font-family: var(--script-font);
+  font-size: 20px;
+}
+
 .welcome-content::after,
 .welcome-content::before {
   content: '\f004';

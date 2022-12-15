@@ -15,16 +15,18 @@
   .navbar {
     display: block;
     top: 0px;
-    padding: 20px 0px 20px 10px;
+    height: 100px;
+    padding: 10px 0px 0px 10px;
   }
 
   .navbar ul {
     justify-content: center;
+    margin-top: -25px;
   }
 
   /* Main */
   .main .main-header {
-    top: 550px;
+    top: 50px;
   }
 
   .welcome-content p {
