@@ -226,10 +226,8 @@ hr {
 }
 
 .main .main-header {
-  position: absolute;
   color: var(--gold-color);
-  top: 370px;
-  text-align: center;
+  margin-top: 370px;
 }
 
 .main .main-header h1 {

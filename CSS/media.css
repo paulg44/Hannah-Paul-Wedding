@@ -26,7 +26,8 @@
 
   /* Main */
   .main .main-header {
-    top: 50px;
+    margin-top: 60px;
+    text-align: center;
   }
 
   .welcome-content p {
