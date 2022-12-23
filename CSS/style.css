@@ -356,6 +356,7 @@ hr {
 
 .btn-rsvp:hover {
   color: var(--gold-color);
+  transform: scale(0.98);
 }
 
 .btn-rsvp:active {
@@ -474,6 +475,11 @@ hr {
 .footer-contact a {
   color: var(--gold-color);
   padding: 10px;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.footer-contact a:hover {
+  transform: translate(1.02);
 }
 
 .footer-contact .fa-envelope {
