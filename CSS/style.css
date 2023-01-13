@@ -118,6 +118,7 @@ hr {
 }
 
 /* Section Divider */
+/* All Section Dividers */
 .section-divider {
   display: flex;
   justify-content: center;
@@ -156,6 +157,7 @@ hr {
   text-shadow: 2px 2px 5px var(--light-purple-color);
 }
 
+/* Homepage Divider */
 .section-divider .skull {
   color: var(--light-purple-color);
   z-index: 1;
@@ -191,6 +193,7 @@ hr {
   transform: rotate(20deg);
 }
 
+/* Venue Dividers */
 .divider-two i {
   margin-top: 20px;
   padding: 0 10px;
@@ -238,6 +241,7 @@ hr {
   margin: 50px 0px;
 }
 
+/* Welcome Content */
 .welcome-content p {
   padding: 20px 150px 50px;
 }
@@ -267,6 +271,7 @@ hr {
   bottom: 10px;
 }
 
+/* Countdown Timer */
 .countdown h3 {
   text-align: center;
 }
@@ -363,6 +368,7 @@ hr {
   transform: scale(0.9);
 }
 
+/* Contact Form */
 .contact-form {
   display: flex;
   align-items: center;
@@ -397,7 +403,8 @@ hr {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Venue */
+/* Venue Information */
+/* Venue & Venue Accommadation */
 .venue-heading h3,
 .info h3 {
   font-size: 4.5rem;
