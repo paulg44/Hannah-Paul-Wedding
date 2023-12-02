@@ -1,6 +1,6 @@
 :root {
   --primary-color: #4e053e;
-  --secondary-color: #5b0e4e;
+  --secondary-color: #7d146b;
   --gold-color: #dc9c40;
   --light-color: #f4f4f4;
   --dark-color: #333;
@@ -50,7 +50,6 @@ li {
 
 a {
   text-decoration: none;
-  /* color: var(--light-color); */
 }
 
 .btn {
@@ -143,6 +142,14 @@ hr {
 
 .links a:hover {
   border-bottom: 2px solid var(--primary-color);
+}
+
+.links i {
+  color: var(--primary-color);
+}
+
+.links i:hover {
+  color: var(--secondary-color);
 }
 
 /* Link to my website */
