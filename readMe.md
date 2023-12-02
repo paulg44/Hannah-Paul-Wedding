@@ -1,3 +1,3 @@
 # Hannah-Paul-Wedding
 
-Repurpose this site for our wedding photos
+Me and my partner are getting married in November, so I decided to make a website for us for fun.

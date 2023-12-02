@@ -76,7 +76,7 @@ hr {
 /* Logo */
 .logo {
   position: absolute;
-  left: 10px;
+  left: 2%;
   top: 10px;
   font-family: var(--script-font);
   font-size: 2.5rem;
@@ -92,15 +92,13 @@ hr {
 /* Main Homepage */
 .main {
   position: relative;
-  background: url('/img/wedding_background.jpg') no-repeat center center/cover;
   height: 100vh;
-  border-bottom: 2px solid var(--gold-color);
 }
 
 .main .main-header {
   position: absolute;
-  top: 15%;
-  left: 53%;
+  top: 60%;
+  right: 60px;
 }
 
 .main .main-header h1 {
@@ -109,128 +107,36 @@ hr {
   font-size: 4rem;
 }
 
-/* Welcome Content */
-.welcome {
-  text-align: left;
-  height: 200px;
-}
-
-.welcome-content {
-  margin: 10px 20px;
-}
-
-.welcome-content p {
-  width: 50%;
-}
-
-.welcome-content::after,
-.welcome-content::before {
-  content: '\f004';
-  font-family: 'Font Awesome 5 Free';
-  color: var(--secondary-color);
-  font-size: 10rem;
-  opacity: 0.1;
+.welcome-message {
   position: absolute;
-  top: 98%;
-  right: 125px;
-  z-index: 0;
+  bottom: 100px;
+  right: 0;
+  width: 350px;
+  text-align: right;
 }
 
-.welcome-content::before {
-  color: var(--gold-color);
-  right: 200px;
-  top: 95%;
-}
-
-@keyframes rotate {
-  from {
-    rotate: (0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Footer */
-
-.footer {
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-
-.footer .created {
-  margin-top: 40px;
-  margin-right: 10px;
-}
-
-.footer-contact {
+.main img {
   position: absolute;
-  left: 170px;
-  top: 20px;
-}
-
-.created {
-  font-size: 0.5rem;
-}
-
-.footer-contact a {
-  color: var(--gold-color);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60%;
+  box-shadow: 0px 36px 0px -30px var(--light-color),
+    -36px 0px 0px -30px var(--light-color),
+    0px -36px 0px -30px var(--light-color),
+    36px 0px 0px -30px var(--light-color), 0 0 0 5px var(--primary-color);
+  border: 2px solid var(--secondary-color);
   padding: 10px;
-  transition: font-size 0.2s ease-in-out;
+  z-index: -1;
 }
 
-.footer-contact a:hover {
-  transform: translate(1.02);
+/* Link to my website */
+.web-link {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  font-size: 0.75rem;
 }
 
-.footer-contact .fa-envelope {
-  animation: turn 2s ease infinite;
-}
-
-@keyframes turn {
-  30% {
-    transform: scale(1.2);
-  }
-  40%,
-  60% {
-    transform: rotate(-20deg) scale(1.2);
-  }
-  50% {
-    transform: rotate(20deg) scale(1.2);
-  }
-  70% {
-    transform: rotate(0deg) scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.footer-contact .fa-phone {
-  animation: shake 1s ease infinite;
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-1px);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(1px);
-  }
+.my-website-link {
+  color: var(--gold-color);
 }
