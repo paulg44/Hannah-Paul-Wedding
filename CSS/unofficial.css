@@ -9,7 +9,7 @@
 }
 
 .photo-card {
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,4 +27,10 @@
 
 .photo-card p {
   padding: 20px 0;
+}
+
+.btns {
+  position: absolute;
+  left: 20px;
+  top: 50%;
 }
