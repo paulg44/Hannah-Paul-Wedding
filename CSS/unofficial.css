@@ -1,0 +1,30 @@
+/* Stylesheet for unofficial photos */
+
+.photo-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.photo-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 550px;
+  background-color: var(--light-color);
+  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+.photo-card img {
+  width: 85%;
+  padding: 15px 0 5px;
+}
+
+.photo-card p {
+  padding: 20px 0;
+}
