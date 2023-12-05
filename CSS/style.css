@@ -52,10 +52,6 @@ h6 {
   text-shadow: 1px 1px 3px var(--dark-color);
 }
 
-img {
-  /* width: 50%; */
-}
-
 li {
   list-style: none;
 }
