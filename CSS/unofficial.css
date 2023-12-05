@@ -21,7 +21,7 @@
 }
 
 .photo-card img {
-  width: 85%;
+  width: 80%;
   padding: 15px 0 5px;
 }
 
@@ -29,8 +29,19 @@
   padding: 20px 0;
 }
 
-.btns {
+/* Buttons */
+.photo-btn {
+  background: transparent;
+  border: none;
+  color: var(--secondary-color);
+}
+
+.prev {
   position: absolute;
-  left: 20px;
-  top: 50%;
+  left: 25%;
+}
+
+.next {
+  position: absolute;
+  right: 25%;
 }
