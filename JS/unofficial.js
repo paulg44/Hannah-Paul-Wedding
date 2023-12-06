@@ -23,6 +23,38 @@ let photoArr = [
   },
 ];
 
+// const fs = require('fs');
+// const path = require('path');
+
+// const imageFolder = '../img';
+// const photoArr = [];
+
+// fs.readdir(imageFolder, (err, files) => {
+//   if (err) {
+//     console.error('Error reading directory:', err);
+//     return;
+//   }
+
+//   files.forEach(file => {
+//     const filePath = path.join(imageFolder, file);
+
+//     // Check if it's a file (not a directory)
+//     if (fs.statSync(filePath).isFile()) {
+//       // Create an object for each image with file path and description
+//       const imageObject = {
+//         path: filePath,
+//         description: `Description for ${file}`, // You can replace this with your actual description logic
+//       };
+
+//       // Add the object to the array
+//       photoArr.push(imageObject);
+//     }
+//   });
+
+//   // Now imageArray contains an array of objects with file paths and descriptions
+//   console.log(imageArray);
+// });
+
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const unofficialBtn = document.querySelector('.unofficial-btn');
