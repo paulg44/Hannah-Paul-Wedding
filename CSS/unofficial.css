@@ -40,6 +40,10 @@
   transform: scale(0.96);
 }
 
+.photo-btn::before {
+  content: '';
+}
+
 .prev {
   position: absolute;
   left: 25%;
