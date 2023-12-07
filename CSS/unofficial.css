@@ -53,3 +53,9 @@
   position: absolute;
   right: 25%;
 }
+
+.loading-screen {
+  position: absolute;
+  text-align: left;
+  /* width: 100%; */
+}

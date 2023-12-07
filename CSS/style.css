@@ -25,6 +25,7 @@ body {
     var(--primary-color) 350%,
     var(--light-color) 100%
   );
+  overflow: hidden;
   /* background: radial-gradient(
     farthest-corner at 40px 40px,
     var(--primary-color) 0%,

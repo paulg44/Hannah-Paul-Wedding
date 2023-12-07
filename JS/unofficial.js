@@ -4,13 +4,33 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const unofficialBtn = document.querySelector('.unofficial-btn');
 const photoContainer = document.querySelector('.photo-container');
+const loadingScreen = document.querySelector('.loading-screen');
 
 let currentPhotoIndex = 0;
 let photoArr = [];
 
+function showLoadingScreen() {
+  loadingScreen.style.display = 'block';
+}
+function hideLoadingScreen() {
+  setTimeout(() => {
+    loadingScreen.style.display = 'none';
+  }, 1000);
+}
+function hidePhotos() {
+  photoContainer.style.display = 'none';
+}
+function showPhotos() {
+  setTimeout(() => {
+    photoContainer.style.display = 'flex';
+  }, 1000);
+}
+
 // Fetch JSON file
 async function fetchPhotos() {
   try {
+    // showLoadingScreen();
+
     const response = await fetch('/photos.json');
 
     if (!response.ok) {
@@ -24,10 +44,13 @@ async function fetchPhotos() {
     initializePhotoCards();
   } catch (error) {
     console.error('error fetching photos', error);
+  } finally {
+    // hideLoadingScreen();
   }
 }
 
-fetchPhotos(currentPhotoIndex);
+hideLoadingScreen();
+fetchPhotos();
 
 // Create photo element to make it look like a stack of photos
 function createPhotoCard(photo) {
@@ -51,7 +74,7 @@ function createPhotoCard(photo) {
   //   Add randomness to pile
   const rotation = Math.random() * 20 - 10; // Random rotation between -10 and 10 degrees
   const offsetX = Math.random() * 20 - 10; // Random horizontal offset between -10 and 10 pixels
-  const offsetY = Math.random() * 20 - 10; // Random vertical offset between -10 and 10 pixels
+  const offsetY = Math.random() * 3 - 1; // Random vertical offset between -10 and 10 pixels
 
   photoCard.style.transform = `rotate(${rotation}deg) translate(${offsetX}px, ${offsetY}px)`;
 
@@ -60,6 +83,8 @@ function createPhotoCard(photo) {
 
 // Function to initialize the photo cards
 function initializePhotoCards() {
+  photoContainer.style.display = 'none';
+  showPhotos();
   photoArr.forEach(photo => {
     const photoCard = createPhotoCard(photo);
 
@@ -77,16 +102,11 @@ function initializePhotoCards() {
   });
 }
 
-// Loading Screen
-function showLoad() {
-  la;
-}
-
 // Call the initialization function
 initializePhotoCards();
 
 // Function to change photos on button click
-function photoCardChanger(photo) {
+function photoCardChanger() {
   const currentPhoto = photoArr[currentPhotoIndex];
   const photoCard = createPhotoCard(currentPhoto);
   photoContainer.appendChild(photoCard);
