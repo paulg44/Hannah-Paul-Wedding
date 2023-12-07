@@ -9,23 +9,6 @@ const loadingScreen = document.querySelector('.loading-screen');
 let currentPhotoIndex = 0;
 let photoArr = [];
 
-function showLoadingScreen() {
-  loadingScreen.style.display = 'block';
-}
-function hideLoadingScreen() {
-  setTimeout(() => {
-    loadingScreen.style.display = 'none';
-  }, 1000);
-}
-function hidePhotos() {
-  photoContainer.style.display = 'none';
-}
-function showPhotos() {
-  setTimeout(() => {
-    photoContainer.style.display = 'flex';
-  }, 1000);
-}
-
 // Fetch JSON file
 async function fetchPhotos() {
   try {
@@ -41,15 +24,29 @@ async function fetchPhotos() {
 
     const json = await response.json();
     photoArr = json;
-    initializePhotoCards();
   } catch (error) {
     console.error('error fetching photos', error);
   } finally {
-    // hideLoadingScreen();
   }
 }
 
-hideLoadingScreen();
+async function fetchSinglePhoto(index) {
+  try {
+    const response = await fetch('/photos.json');
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch: ${response.status} - ${response.statusText}`
+      );
+    }
+
+    const json = await response.json();
+    return json[index];
+  } catch (error) {
+    console.error('Error fetching single photo', error);
+  }
+}
+
 fetchPhotos();
 
 // Create photo element to make it look like a stack of photos
@@ -81,57 +78,37 @@ function createPhotoCard(photo) {
   return photoCard;
 }
 
-// Function to initialize the photo cards
-function initializePhotoCards() {
-  photoContainer.style.display = 'none';
-  showPhotos();
-  photoArr.forEach(photo => {
-    const photoCard = createPhotoCard(photo);
-
-    // Add photo card to container
-    photoContainer.appendChild(photoCard);
-    //   Reduce opacity on cards lower down in the stack
-    const existingPhoto = document.querySelectorAll('.photo-card img');
-    existingPhoto.forEach((card, index) => {
-      if (index === currentPhotoIndex) {
-        card.style.opacity = 1;
-      } else {
-        card.style.opacity = 0.3;
-      }
-    });
-  });
-}
-
-// Call the initialization function
-initializePhotoCards();
-
 // Function to change photos on button click
-function photoCardChanger() {
-  const currentPhoto = photoArr[currentPhotoIndex];
+async function photoCardChanger(direction) {
+  if (direction === nextBtn) {
+    currentPhotoIndex = (currentPhotoIndex + 1) % photoArr.length;
+  } else if (direction === prevBtn) {
+    currentPhotoIndex =
+      (currentPhotoIndex - 1 + photoArr.length) % photoArr.length;
+  }
+  const currentPhoto = await fetchSinglePhoto(currentPhotoIndex);
   const photoCard = createPhotoCard(currentPhoto);
   photoContainer.appendChild(photoCard);
+
+  //   Reduce opacity on cards lower down in the stack
+  // const existingPhoto = document.querySelectorAll('.photo-card img');
+  // existingPhoto.forEach((card, index) => {
+  //   if (index === currentPhotoIndex) {
+  //     card.style.opacity = 1;
+  //   } else {
+  //     card.style.opacity = 0.3;
+  //   }
+  // });
 }
 
 prevBtn.addEventListener('click', () => {
   console.log('prev clicked');
-  if (currentPhotoIndex > 0) {
-    currentPhotoIndex--;
-  } else {
-    // Wrap around to the last photo if at the first photo
-    currentPhotoIndex = photoArr.length - 1;
-  }
-  photoCardChanger();
+  photoCardChanger(prevBtn);
 });
 
 nextBtn.addEventListener('click', () => {
   console.log('next clicked');
-  if (currentPhotoIndex < photoArr.length - 1) {
-    currentPhotoIndex++;
-  } else {
-    // Wrap around to the first photo if at the last photo
-    currentPhotoIndex = 0;
-  }
-  photoCardChanger();
+  photoCardChanger(nextBtn);
 });
 
-photoCardChanger();
+fetchPhotos();
