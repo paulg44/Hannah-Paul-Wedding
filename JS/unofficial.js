@@ -114,10 +114,4 @@ nextBtn.addEventListener('click', () => {
   photoCardChanger();
 });
 
-// Clear page
-// unofficialBtn.addEventListener('click', () => {
-//   console.log('unoff clicked');
-//   photoContainer.innerHTML = '';
-// });
-
 photoCardChanger();
