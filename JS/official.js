@@ -1,5 +1,5 @@
 // Photo array
-let photoArr = [
+"let photoArr = [
   {
     id: 1,
     image: '../img/IMG-20231127-WA0005.jpg',
@@ -40,7 +40,7 @@ let photoArr = [
     image: '../img/aisle_walk.jpg',
     description: 'aisle walk',
   },
-];
+];"
 
 const gridContainer = document.querySelector('.photo-grid-container');
 

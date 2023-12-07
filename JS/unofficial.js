@@ -1,59 +1,4 @@
 // Photo scroll
-// Photo array
-let photoArr = [
-  {
-    id: 1,
-    image: '../img/IMG-20231127-WA0005.jpg',
-    description: 'test image one',
-  },
-  {
-    id: 2,
-    image: '../img/IMG-20231127-WA0062.jpg',
-    description: 'test image two',
-  },
-  {
-    id: 3,
-    image: '../img/wedding_background.jpg',
-    description: 'test image three',
-  },
-  {
-    id: 4,
-    image: '../img/aisle_walk.jpg',
-    description: 'aisle walk',
-  },
-];
-
-// const fs = require('fs');
-// const path = require('path');
-
-// const imageFolder = '../img';
-// const photoArr = [];
-
-// fs.readdir(imageFolder, (err, files) => {
-//   if (err) {
-//     console.error('Error reading directory:', err);
-//     return;
-//   }
-
-//   files.forEach(file => {
-//     const filePath = path.join(imageFolder, file);
-
-//     // Check if it's a file (not a directory)
-//     if (fs.statSync(filePath).isFile()) {
-//       // Create an object for each image with file path and description
-//       const imageObject = {
-//         path: filePath,
-//         description: `Description for ${file}`, // You can replace this with your actual description logic
-//       };
-
-//       // Add the object to the array
-//       photoArr.push(imageObject);
-//     }
-//   });
-
-//   // Now imageArray contains an array of objects with file paths and descriptions
-//   console.log(imageArray);
-// });
 
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
@@ -61,6 +6,28 @@ const unofficialBtn = document.querySelector('.unofficial-btn');
 const photoContainer = document.querySelector('.photo-container');
 
 let currentPhotoIndex = 0;
+let photoArr = [];
+
+// Fetch JSON file
+async function fetchPhotos() {
+  try {
+    const response = await fetch('/photos.json');
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch: ${response.status} - ${response.statusText}`
+      );
+    }
+
+    const json = await response.json();
+    photoArr = json;
+    initializePhotoCards();
+  } catch (error) {
+    console.error('error fetching photos', error);
+  }
+}
+
+fetchPhotos(currentPhotoIndex);
 
 // Create photo element to make it look like a stack of photos
 function createPhotoCard(photo) {
@@ -110,13 +77,16 @@ function initializePhotoCards() {
   });
 }
 
+// Loading Screen
+function showLoad() {
+  la;
+}
+
 // Call the initialization function
 initializePhotoCards();
 
 // Function to change photos on button click
 function photoCardChanger(photo) {
-  //   photoContainer.innerHTML = '';
-
   const currentPhoto = photoArr[currentPhotoIndex];
   const photoCard = createPhotoCard(currentPhoto);
   photoContainer.appendChild(photoCard);
@@ -145,9 +115,9 @@ nextBtn.addEventListener('click', () => {
 });
 
 // Clear page
-unofficialBtn.addEventListener('click', () => {
-  console.log('unoff clicked');
-  photoContainer.innerHTML = '';
-});
+// unofficialBtn.addEventListener('click', () => {
+//   console.log('unoff clicked');
+//   photoContainer.innerHTML = '';
+// });
 
 photoCardChanger();
