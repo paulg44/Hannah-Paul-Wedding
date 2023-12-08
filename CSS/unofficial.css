@@ -1,5 +1,9 @@
 /* Stylesheet for unofficial photos */
 
+.unofficial {
+  overflow: hidden;
+}
+
 .photo-container {
   height: 100vh;
   display: flex;

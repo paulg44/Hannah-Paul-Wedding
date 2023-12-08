@@ -1,48 +1,28 @@
 // Photo array
-"let photoArr = [
-  {
-    id: 1,
-    image: '../img/IMG-20231127-WA0005.jpg',
-    description: 'test image one',
-  },
-  {
-    id: 2,
-    image: '../img/IMG-20231127-WA0062.jpg',
-    description: 'test image two',
-  },
-  {
-    id: 3,
-    image: '../img/wedding_background.jpg',
-    description: 'test image three',
-  },
-  {
-    id: 4,
-    image: '../img/aisle_walk.jpg',
-    description: 'aisle walk',
-  },
-  {
-    id: 1,
-    image: '../img/IMG-20231127-WA0005.jpg',
-    description: 'test image one',
-  },
-  {
-    id: 2,
-    image: '../img/IMG-20231127-WA0062.jpg',
-    description: 'test image two',
-  },
-  {
-    id: 3,
-    image: '../img/wedding_background.jpg',
-    description: 'test image three',
-  },
-  {
-    id: 4,
-    image: '../img/aisle_walk.jpg',
-    description: 'aisle walk',
-  },
-];"
 
 const gridContainer = document.querySelector('.photo-grid-container');
+
+let photoArr = [];
+
+// Fetch JSON file
+async function fetchPhotos() {
+  try {
+    const response = await fetch('/photos.json');
+
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch: ${response.status} - ${response.statusText}`
+      );
+    }
+
+    const json = await response.json();
+    photoArr = json;
+    initializePhotoCards();
+  } catch (error) {
+    console.error('error fetching photos', error);
+  } finally {
+  }
+}
 
 // Create each image card
 function createPhotoCard(photo) {
@@ -77,3 +57,4 @@ function initializePhotoCards() {
 }
 
 initializePhotoCards();
+fetchPhotos();

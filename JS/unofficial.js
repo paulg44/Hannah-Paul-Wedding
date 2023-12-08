@@ -4,7 +4,7 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const unofficialBtn = document.querySelector('.unofficial-btn');
 const photoContainer = document.querySelector('.photo-container');
-const loadingScreen = document.querySelector('.loading-screen');
+// const loadingScreen = document.querySelector('.loading-screen');
 
 let currentPhotoIndex = 0;
 let photoArr = [];
@@ -12,8 +12,6 @@ let photoArr = [];
 // Fetch JSON file
 async function fetchPhotos() {
   try {
-    // showLoadingScreen();
-
     const response = await fetch('/photos.json');
 
     if (!response.ok) {
