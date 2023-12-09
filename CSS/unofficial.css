@@ -60,4 +60,11 @@
 
 /* Media Queries */
 @media (max-width: 1000px) {
+  .prev {
+    bottom: 5%;
+  }
+  .next {
+    bottom: 5%;
+    z-index: 1;
+  }
 }
