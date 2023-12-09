@@ -4,7 +4,6 @@ const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 const unofficialBtn = document.querySelector('.unofficial-btn');
 const photoContainer = document.querySelector('.photo-container');
-// const loadingScreen = document.querySelector('.loading-screen');
 
 let currentPhotoIndex = 0;
 let photoArr = [];
@@ -76,6 +75,13 @@ function createPhotoCard(photo) {
   return photoCard;
 }
 
+// Pre-load next image to combat text displaying before image
+function preLoadNextImage() {
+  const nextIndex = (currentPhotoIndex + 1) % photoArr.length;
+  const nextImage = new Image();
+  nextImage.src = photoArr[nextIndex].image;
+}
+
 // Function to change photos on button click
 async function photoCardChanger(direction) {
   if (direction === nextBtn) {
@@ -97,6 +103,7 @@ async function photoCardChanger(direction) {
   //     card.style.opacity = 0.3;
   //   }
   // });
+  preLoadNextImage();
 }
 
 prevBtn.addEventListener('click', () => {
