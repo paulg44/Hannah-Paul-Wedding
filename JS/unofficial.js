@@ -5,7 +5,9 @@ const nextBtn = document.querySelector('.next');
 const unofficialBtn = document.querySelector('.unofficial-btn');
 const photoContainer = document.querySelector('.photo-container');
 
+// Set current photo to 0
 let currentPhotoIndex = 0;
+// Initial empty array to store photos as fetched
 let photoArr = [];
 
 // Fetch JSON file
@@ -28,6 +30,7 @@ async function fetchPhotos() {
   }
 }
 
+// API function to fetch single photo
 async function fetchSinglePhoto(index) {
   try {
     const response = await fetch('/photos.json');
@@ -105,11 +108,13 @@ async function photoCardChanger(direction) {
   preLoadNextImage();
 }
 
+// Previous photo button
 prevBtn.addEventListener('click', () => {
   console.log('prev clicked');
   photoCardChanger(prevBtn);
 });
 
+// Next photo button
 nextBtn.addEventListener('click', () => {
   console.log('next clicked');
   photoCardChanger(nextBtn);

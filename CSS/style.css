@@ -128,7 +128,7 @@ hr {
   top: 50%;
   transform: translateY(-50%);
   width: 60%;
-
+  margin-left: 60px;
   box-shadow: 0px 36px 0px -30px var(--light-color),
     -36px 0px 0px -30px var(--light-color),
     0px -36px 0px -30px var(--light-color),
@@ -172,4 +172,40 @@ hr {
 
 .my-website-link {
   color: var(--gold-color);
+}
+
+/* Media Queries */
+@media (max-width: 1000px) {
+  .main .main-header {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+  }
+
+  .main .main-header h1 {
+    font-size: 3rem;
+  }
+
+  .welcome-message {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .main .main-image {
+    display: block;
+    width: 95%;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .links-to-photos {
+    right: 10px;
+  }
+
+  .links li {
+    text-align: right;
+  }
 }
