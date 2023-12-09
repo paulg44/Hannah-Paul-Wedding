@@ -21,6 +21,7 @@ async function fetchPhotos() {
 
     const json = await response.json();
     photoArr = json;
+    photoCardChanger();
   } catch (error) {
     console.error('error fetching photos', error);
   } finally {
@@ -43,8 +44,6 @@ async function fetchSinglePhoto(index) {
     console.error('Error fetching single photo', error);
   }
 }
-
-fetchPhotos();
 
 // Create photo element to make it look like a stack of photos
 function createPhotoCard(photo) {
