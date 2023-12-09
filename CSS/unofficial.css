@@ -43,9 +43,45 @@
 .photo-btn:active {
   transform: scale(0.96);
 }
+.next::before,
+.prev::before {
+  content: '\f004';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  bottom: 40px;
+  left: 25px;
+  color: red;
+}
 
-.photo-btn::before {
-  content: '';
+.prev::before {
+  left: 0;
+  animation: prevHeart 2s forwards infinite;
+}
+
+.next::before {
+  animation: nextHeart 2s forwards infinite;
+}
+
+@keyframes nextHeart {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(20px, -20px);
+  }
+}
+@keyframes prevHeart {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-20px, -20px);
+  }
 }
 
 .prev {
@@ -62,6 +98,7 @@
 @media (max-width: 1000px) {
   .prev {
     bottom: 5%;
+    z-index: 1;
   }
   .next {
     bottom: 5%;
