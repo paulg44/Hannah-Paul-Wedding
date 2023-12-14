@@ -8,7 +8,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .photographer-details {
@@ -33,6 +33,7 @@ body {
 
 .photo-card img {
   width: 80%;
+  padding-top: 20px;
 }
 
 .photo-card p {

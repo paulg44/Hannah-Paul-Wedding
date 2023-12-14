@@ -43,6 +43,21 @@
 .photo-btn:active {
   transform: scale(0.96);
 }
+
+.next.clicked::before {
+  animation: nextHeart 2s forwards ease;
+}
+.next.clicked::after {
+  animation: nextHeart 2s 1s forwards ease;
+}
+
+.prev.clicked::before {
+  animation: prevHeart 2s forwards ease;
+}
+.prev.clicked::after {
+  animation: prevHeart 2s 1s forwards ease;
+}
+
 .next::before,
 .prev::before {
   content: '\f004';
@@ -52,33 +67,52 @@
   bottom: 40px;
   left: 25px;
   color: red;
+  opacity: 0;
+  transform: translate(0, 0);
+}
+.next::after,
+.prev::after {
+  content: '\f004';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  bottom: 40px;
+  left: 25px;
+  color: red;
+  opacity: 0;
+  transform: translate(0, 0);
 }
 
-.prev::before {
-  left: 0;
-  animation: prevHeart 2s forwards infinite;
-}
-
-.next::before {
-  animation: nextHeart 2s forwards infinite;
+.prev::before,
+.prev:after {
+  left: 0px;
 }
 
 @keyframes nextHeart {
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translate(0, 0);
   }
-  to {
+  50% {
+    opacity: 1;
+    transform: translate(20px, -20px);
+  }
+  100% {
     opacity: 0;
     transform: translate(20px, -20px);
   }
 }
+
 @keyframes prevHeart {
   0% {
-    opacity: 1;
+    opacity: 0;
     transform: translate(0, 0);
   }
-  to {
+  50% {
+    opacity: 1;
+    transform: translate(-20px, -20px);
+  }
+  65% {
     opacity: 0;
     transform: translate(-20px, -20px);
   }

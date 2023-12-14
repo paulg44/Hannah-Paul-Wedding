@@ -5,6 +5,14 @@ const nextBtn = document.querySelector('.next');
 const unofficialBtn = document.querySelector('.unofficial-btn');
 const photoContainer = document.querySelector('.photo-container');
 
+// Hearts
+nextBtn.addEventListener('click', function () {
+  this.classList.toggle('clicked');
+});
+prevBtn.addEventListener('click', function () {
+  this.classList.toggle('clicked');
+});
+
 // Set current photo to 0
 let currentPhotoIndex = 0;
 // Initial empty array to store photos as fetched
