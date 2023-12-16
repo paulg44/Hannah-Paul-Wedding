@@ -184,6 +184,10 @@
 
 /* Media Queries */
 @media (max-width: 1000px) {
+  .unofficial {
+    overflow-y: scroll;
+  }
+
   .photo-card {
     width: 300px;
   }
