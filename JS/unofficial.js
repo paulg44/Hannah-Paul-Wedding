@@ -67,6 +67,19 @@ function createPhotoCard(photo) {
   img.src = photo.image;
   img.alt = photo.description;
 
+  let isExpanded = false;
+  img.addEventListener('click', () => {
+    if (isExpanded) {
+      img.style.width = '';
+      img.style.height = '';
+    } else {
+      img.style.width = 'fit-content';
+      img.style.height = 'fit-content';
+    }
+
+    isExpanded = !isExpanded;
+  });
+
   //   Create description
   const description = document.createElement('p');
   description.textContent = photo.description;
