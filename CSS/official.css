@@ -39,3 +39,17 @@ body {
 .photo-card p {
   padding: 20px 0;
 }
+
+/* Scroll to top button */
+.scroll-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
